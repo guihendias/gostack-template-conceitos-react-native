@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import {
   SafeAreaView,
@@ -9,6 +9,7 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
+import api from "./services/api";
 
 export default function App() {
   const [repositories, setRepositories] = useState([]);
@@ -46,7 +47,7 @@ export default function App() {
 
               <View style={styles.techsContainer}>
                 <FlatList
-                  data={repo.techs}
+                  data={repository.techs}
                   keyExtractor={(tech) => tech}
                   renderItem={({ item: tech }) => (
                     <Text style={styles.tech}>{tech}</Text>
