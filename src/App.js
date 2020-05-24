@@ -46,7 +46,7 @@ export default function App() {
 
               <View style={styles.techsContainer}>
                 <FlatList
-                  data={repositories.techs}
+                  data={repo.techs}
                   keyExtractor={(tech) => tech}
                   renderItem={({ item: tech }) => (
                     <Text style={styles.tech}>{tech}</Text>
